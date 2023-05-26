@@ -1,14 +1,15 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
-// asociada a un ensamblado.
-[assembly: AssemblyTitle("RayTracingApp")]
+// asociada con un ensamblado.
+[assembly: AssemblyTitle("DataBaseRepository")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("RayTracingApp")]
+[assembly: AssemblyProduct("DataBaseRepository")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-[assembly: Guid("df2d8ac3-acd5-4ad8-a67b-7c7e3acc9f83")]
+[assembly: Guid("12446d31-6ba6-4a22-8585-d2376c307d6f")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //
