@@ -29,14 +29,16 @@ namespace DataBaseRepository
 
         public void RemoveFigure(Figure figure)
         {
-            if (!_figures.Remove(figure))
+            using (var context = new Context())
             {
-                throw new NotFoundFigureException(NotFoundFigureMessage);
-            }
-            else
-            {
-                _figures.Remove(figure);
-            }
+				var figureToRemove = context.Figures.FirstOrDefault(f => f.Id.Equals(figure.Id));
+				if (figureToRemove is null)
+                {
+					throw new NotFoundModelException(NotFoundFigureMessage);
+				}
+				context.Figures.Remove(figureToRemove);
+				context.SaveChanges();
+			}
         }
     }
 }
