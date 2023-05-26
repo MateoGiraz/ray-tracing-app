@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -9,5 +10,8 @@ namespace DataBaseRepository
 {
     public class Context : DbContext
     {
+		public DbSet<Figure> Figures { get; set; }
+
+		public Context() : base("RayTraicingAppDB") { }
     }
 }
