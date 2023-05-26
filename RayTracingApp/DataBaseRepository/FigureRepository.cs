@@ -22,7 +22,8 @@ namespace DataBaseRepository
         {
             using (var context = new Context())
             {
-
+                context.Figures.Add(newFigure);
+                context.SaveChanges();
             }
         }
 
