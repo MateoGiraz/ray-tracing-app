@@ -19,7 +19,7 @@ namespace GUI
     public partial class ScenePage : UserControl
     {
         private SceneHome _sceneHome;
-
+        private ExportPage _exportPage;
         private ModelController _modelController;
         private SceneController _sceneController;
 
@@ -31,11 +31,13 @@ namespace GUI
 
         public ScenePage(Scene scene, SceneHome sceneHome, MainController mainController, Client currentClient, RenderProperties renderProperties)
         {
-
+                
             InitializeControllers(mainController);
             SetAtributes(scene, currentClient, renderProperties, sceneHome);
             InitializeComponent();
             SetSceneTextAtributes();
+
+            _exportPage = new ExportPage(scene.Preview);
         }
 
         private void SetAtributes(Scene scene, Client currentClient, RenderProperties renderProperties, SceneHome sceneHome)
@@ -147,6 +149,7 @@ namespace GUI
             Scanner scanner = new Scanner();
             Bitmap img = scanner.ScanImage(image);
             SetRenderedImage(img);
+            _exportPage._img = img;
 
             ReInitialazeUI();
         }
@@ -294,5 +297,9 @@ namespace GUI
             Render();
         }
 
+        private void picIconExport_Click(object sender, EventArgs e)
+        {
+            _sceneHome.GoToExportPage(_exportPage);
+        }
     }
 }

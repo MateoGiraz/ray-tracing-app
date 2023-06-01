@@ -70,5 +70,6 @@ namespace GUI
 		{
 			_sceneHome.GoToAddScene(_scene);
 		}
-	}
+
+    }
 }

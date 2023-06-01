@@ -30,7 +30,6 @@ namespace GUI
         {
             _currentClient = currentClient;
             _mainController = mainController;
-            
             InitializeComponent();
 
             _defaultRenderSettings = new DefaultRenderSettings(this);
@@ -63,6 +62,12 @@ namespace GUI
         {
             flySceneHome.Controls.Clear();
             flySceneHome.Controls.Add(_defaultRenderSettings);
+        }
+
+        public void GoToExportPage(ExportPage exportPage)
+        {
+            flySceneHome.Controls.Clear();
+            flySceneHome.Controls.Add(exportPage);
         }
     }
 }

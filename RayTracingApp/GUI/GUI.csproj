@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Core.1.1.1\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Shell.1.1.1\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -87,6 +93,12 @@
     </Compile>
     <Compile Include="Home\Scene\AddScene\UsedModelItem.Designer.cs">
       <DependentUpon>UsedModelItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Scene\AddScene\ExportPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Home\Scene\AddScene\ExportPage.Designer.cs">
+      <DependentUpon>ExportPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\SceneUtils.cs" />
     <Compile Include="Utils\StringUtils.cs" />
@@ -231,6 +243,9 @@
     <EmbeddedResource Include="Home\Scene\AddScene\DefaultRenderSettings.resx">
       <DependentUpon>DefaultRenderSettings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Home\Scene\AddScene\ExportPage.resx">
+      <DependentUpon>ExportPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home\Scene\AddScene\ScenePage.resx">
       <DependentUpon>ScenePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -277,6 +292,7 @@
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -424,6 +440,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\blackWarning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
