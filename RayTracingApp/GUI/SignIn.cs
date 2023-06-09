@@ -106,5 +106,17 @@ namespace GUI
 				e.Handled = true;
 			}
 		}
-	}
+
+        private void picIconLogs_Click(object sender, EventArgs e)
+        {
+            _mainForm.GoToLogs();
+            ResetPlaceholders();
+        }
+
+        private void picBackgroundLogs_Click(object sender, EventArgs e)
+        {
+            _mainForm.GoToLogs();
+            ResetPlaceholders();
+        }
+    }
 }
