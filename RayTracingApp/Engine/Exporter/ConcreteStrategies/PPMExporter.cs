@@ -5,7 +5,7 @@ using System.IO;
 
 namespace Engine.Exporter
 {
-	public class PPMExporter : IExporter
+	public class PPMExporter : IExporterStrategy
 	{
 		private const string InvalidPathErrorMessage = "Invalid Path";
 

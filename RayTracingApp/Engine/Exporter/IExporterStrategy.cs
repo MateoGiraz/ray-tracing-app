@@ -2,7 +2,7 @@
 
 namespace Engine.Exporter
 {
-	public interface IExporter
+	public interface IExporterStrategy
 	{
 		void Export(string path, Image img);
 	}

@@ -5,7 +5,7 @@ using System.Drawing.Imaging;
 
 namespace Engine.Exporter
 {
-	public class PNGExporter : IExporter
+	public class JPGExporter : IExporterStrategy
 	{
 		private const string InvalidPathErrorMessage = "Invalid Path";
 
@@ -25,7 +25,7 @@ namespace Engine.Exporter
 		{
 			using (var bitmap = new Bitmap(imagen))
 			{
-				bitmap.Save(path, ImageFormat.Jpeg);
+				bitmap.Save(path, ImageFormat.Png);
 			}
 		}
 	}

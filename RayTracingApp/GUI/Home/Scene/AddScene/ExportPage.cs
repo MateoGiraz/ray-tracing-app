@@ -34,7 +34,7 @@ namespace GUI
 			}
 		}
 
-		private void ExportImage(IExporter exporter, string format)
+		private void ExportImage(IExporterStrategy exporter, string format)
 		{
 			if (String.IsNullOrEmpty(txtPath.Text))
 			{
@@ -61,37 +61,37 @@ namespace GUI
 
 		private void lblPPM_Click(object sender, EventArgs e)
 		{
-			IExporter exporter = new PPMExporter();
+			IExporterStrategy exporter = new PPMExporter();
 			ExportImage(exporter, "ppm");
 		}
 
 		private void picBGPPM_Click(object sender, EventArgs e)
 		{
-			IExporter exporter = new PPMExporter();
+			IExporterStrategy exporter = new PPMExporter();
 			ExportImage(exporter, "ppm");
 		}
 
 		private void lblPNG_Click(object sender, EventArgs e)
 		{
-			IExporter exporter = new PNGExporter();
+			IExporterStrategy exporter = new PNGExporter();
 			ExportImage(exporter, "png");
 		}
 
 		private void picBGPNG_Click(object sender, EventArgs e)
 		{
-			IExporter exporter = new PNGExporter();
+			IExporterStrategy exporter = new PNGExporter();
 			ExportImage(exporter, "png");
 		}
 
 		private void lblJPG_Click(object sender, EventArgs e)
 		{
-			IExporter exporter = new JPGExporter();
+			IExporterStrategy exporter = new JPGExporter();
 			ExportImage(exporter, "jpg");
 		}
 
 		private void picBGJPG_Click(object sender, EventArgs e)
 		{
-			IExporter exporter = new JPGExporter();
+			IExporterStrategy exporter = new JPGExporter();
 			ExportImage(exporter, "jpg");
 		}
 
