@@ -1,3 +1,9 @@
+
+
+ray-tracing-app es el proyecto de DA1, donde construimos una aplicación usando .NET Framework y Entity Framework. Se desarrolla tanto la lógica de negocio como la interfaz de usario y la funcionalidad de un motor gráfico simple que emplea Ray Tracing para renderizar esferas en un espacio tridimencional. 
+
+![Animation](https://github.com/MateoGiraz/ray-tracing-app/assets/100039777/cdab1a99-a806-4672-a34c-b48fc8c992d7)
+
 # Instalación
 
 Se encuentra, en el último commit, la documentación, el release con la aplicación compilada, el código fuente de la aplicación, y el directorio de bases de datos, que incluye tanto para la base de datos principal como de backup, los archivos .bak y los scripts de creación. El ejecutable se encuentra dentro de la carpeta release. Para iniciar la aplicación, primero es necesario restaurar la base de datos, para ello se encuentran los archivos .bak con y sin datos, en las siguientes rutas: _db/Schema&Data/Backup.bak_ y _db/SchemaOnly/Backup.bak_ respectivamente.
@@ -277,5 +283,5 @@ Calculamos la diferencia entre el motor sin uso del Parallel.For y de StringBuil
 
 
 ![image](https://github.com/MateoGiraz/ray-tracing-app/assets/100039777/921a5fa0-be14-4153-b55c-af1b9ec8461f)
-
+![image](https://github.com/MateoGiraz/ray-tracing-app/assets/100039777/81a188e2-07e3-41fb-a37e-68c64a225c81)
 
